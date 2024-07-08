@@ -9,7 +9,7 @@ const getTodo = async (todoId: number) => {
       const return_obj = {
         "owner" : `${person_res.data.name}`,
         "title" : `${todo_res.data.title}` ,
-        "completed": `${todo_res.data.completed}`
+        "completed": todo_res.data.completed,
       };
       return return_obj;
     }
@@ -31,5 +31,6 @@ const input3 = 250;
 getTodo(input1).then((result) => console.log(result));
 getTodo(input2).then((result) => console.log(result));
 getTodo(input3).then((result) => console.log(result));
+getTodo(1).then((result) => console.log(result));
 
 export default getTodo;
